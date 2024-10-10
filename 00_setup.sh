@@ -11,6 +11,7 @@ mkdir 02_vcf
 mkdir 03_vcf
 mkdir 04_vcf
 mkdir 05_structure
+mkdir 06_diagnostic
 mkdir 07_window_stats
 mkdir 07_window_stats/windows
 mkdir 10_filter
