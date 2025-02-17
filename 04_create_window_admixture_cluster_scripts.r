@@ -1,6 +1,6 @@
 	options(scipen=999)
 	project_directory <- "/lustre/scratch/jmanthey/05_certhia_hybrids/09_admixture_windows"
-	directory_name <- "admix_creep_50kbp"
+	directory_name <- "admix_creep_windows"
 	cluster <- "nocona"
 	max_number_jobs <- 400
 	
@@ -12,7 +12,7 @@
 	ref_index <- read.table("06_certhia_reordered.fasta.fai", stringsAsFactors=F)
 	
 	# define window size
-	window_size <- 50000
+	window_size <- 100000
 	
 	# make directories
 	dir.create(directory_name)
@@ -63,7 +63,7 @@
 	write.table(stat_helper, file=paste(directory_name, "/_helper_admix.txt", sep=""), quote=F, row.names=F, col.names=F, sep="\t")
 
 	# write the array script
-	a.script <- paste(directory_name, "/_admix50kbp_array.sh", sep="")
+	a.script <- paste(directory_name, "/_admix100kbp_array.sh", sep="")
 	write("#!/bin/sh", file=a.script)
 	write("#SBATCH --chdir=./", file=a.script, append=T)
 	write(paste("#SBATCH --job-name=", "admix", sep=""), file=a.script, append=T)
