@@ -14,5 +14,11 @@ mkdir 05_structure
 mkdir 06_diagnostic
 mkdir 07_window_stats
 mkdir 07_window_stats/windows
-mkdir 10_filter
-mkdir 11_filter_vcf
+mkdir 08_bgchm
+mkdir 09_admixture_windows
+mkdir 10_lddecay
+mkdir 20_filter
+mkdir 21_filter_vcf
+mkdir 22_certhia_stats
+mkdir 23_bgc_script
+mkdir 24_ld_script
