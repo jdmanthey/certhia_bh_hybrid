@@ -2,10 +2,10 @@
 #SBATCH --chdir=./
 #SBATCH --job-name=genotype
 #SBATCH --partition nocona
-#SBATCH --nodes=1 --ntasks=21
+#SBATCH --nodes=1 --ntasks=12
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=4G
-#SBATCH --array=1-21
+#SBATCH --array=1-35
 
 source activate bcftools
 
@@ -93,7 +93,7 @@ bgzip ${workdir}/02_vcf/${basename_array}.vcf
 tabix ${workdir}/02_vcf/${basename_array}.vcf.gz
 
 # filter individual vcf files
-bcftools view -i 'MIN(DP)>7' ${workdir}/02_vcf/${basename_array}.vcf.gz > \
+bcftools view -i 'MIN(DP)>5' ${workdir}/02_vcf/${basename_array}.vcf.gz > \
 ${workdir}/03_vcf/${basename_array}.vcf
 
 # bgzip
@@ -107,7 +107,7 @@ echo ${basename_array} > ${basename_array}.stats
 
 # samtools depth sum of aligned sites
 echo "samtools depth sum of aligned sites" >> ${basename_array}.stats
-samtools depth  ${workdir}/01_bam_files/${basename_array}_final.bam  |  awk '{sum+=$3} END { print "Sum = ",sum}' >> ${basename_array}.stats
+samtools depth  ${workdir}/01_bam_files/${basename_array}_final.bam  |  awk '{sum+=$3} END { print sum}' >> ${basename_array}.stats
 
 # proportion dupes
 echo "proportion duplicates" >> ${basename_array}.stats
