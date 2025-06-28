@@ -2,14 +2,14 @@
 #SBATCH --chdir=./
 #SBATCH --job-name=genotype
 #SBATCH --partition nocona
-#SBATCH --nodes=1 --ntasks=12
+#SBATCH --nodes=1 --ntasks=24
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=4G
 #SBATCH --array=1-35
 
 source activate bcftools
 
-threads=12
+threads=23
 
 # define main working directory
 workdir=/lustre/scratch/jmanthey/05_certhia_hybrids
