@@ -43,7 +43,7 @@ vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep parentals.txt \
 # filter for windowed ADMIXTURE
 # up to 20% missing, mac = 4, no outgroup
 vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep ingroup.txt --max-missing 0.8 \
---mac 4 --max-maf 0.49 --recode --recode-INFO-all --out ${workdir}/09_admixture_windows/${region_array}
+--mac 3 --max-maf 0.49 --recode --recode-INFO-all --out ${workdir}/09_admixture_windows/${region_array}
 
 # bgzip and index the windowed admixture files
 bgzip -c ${workdir}/09_admixture_windows/${region_array}.recode.vcf > \
