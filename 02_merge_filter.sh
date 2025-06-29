@@ -32,7 +32,7 @@ vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf \
 
 # filter for diagnostic site identification
 vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep parentals.txt \
---max-missing 0.8 --mac 8 --max-alleles 2 --max-maf 0.49 --recode \
+--max-missing 0.8 --mac 8 --max-alleles 2 --recode \
 --recode-INFO-all --out ${workdir}/06_diagnostic/${region_array}
 
 # filter for GADMA of parentals
