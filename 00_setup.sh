@@ -16,6 +16,7 @@ mkdir 07_window_stats
 mkdir 07_window_stats/windows
 mkdir 08_bgchm
 mkdir 09_admixture_windows
+mkdir 09_admixture_windows/windows
 mkdir 10_lddecay
 mkdir 11_splitstree
 mkdir 20_filter
