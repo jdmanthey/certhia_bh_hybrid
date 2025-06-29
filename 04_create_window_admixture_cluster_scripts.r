@@ -1,8 +1,8 @@
 	options(scipen=999)
 	project_directory <- "/lustre/scratch/jmanthey/05_certhia_hybrids/09_admixture_windows"
-	directory_name <- "admix_creep_windows"
+	directory_name <- "25_admix_creep_windows"
 	cluster <- "nocona"
-	max_number_jobs <- 400
+	max_number_jobs <- 200
 	
 	# name of file in project directory for vcf headers
 	vcf_header_file <- "Ca_0029_Tg_19.recode.vcf.gz"
