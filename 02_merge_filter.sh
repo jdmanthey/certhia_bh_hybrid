@@ -41,7 +41,7 @@ vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep parentals.txt \
 --recode-INFO-all --out ${workdir}/12_gadma/${region_array}
 
 # filter for windowed ADMIXTURE
-# up to 20% missing, mac = 4, no outgroup
+# up to 20% missing, mac = 3, no outgroup
 vcftools --vcf ${workdir}/04_vcf/${region_array}.vcf --keep ingroup.txt --max-missing 0.8 \
 --mac 3 --max-maf 0.49 --recode --recode-INFO-all --out ${workdir}/09_admixture_windows/${region_array}
 
