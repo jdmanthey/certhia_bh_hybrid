@@ -18,6 +18,7 @@ mkdir 08_bgchm
 mkdir 09_admixture_windows
 mkdir 09_admixture_windows/windows
 mkdir 10_lddecay
+mkdir 10b_lddecay
 mkdir 11_splitstree
 mkdir 20_filter
 mkdir 21_filter_vcf
