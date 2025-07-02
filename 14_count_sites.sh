@@ -18,7 +18,7 @@ for i in $( ls *vcf.gz ); do
 	
 	echo "number snps" >> filtering_stats.txt
 	
-	gzip -cd $i | grep -v "^#" | cut -f5 | grep -v "\\." | wc -l
+	gzip -cd $i | grep -v "^#" | cut -f5 | grep -v "\\." | wc -l >> filtering_stats.txt
 	
 done
 
